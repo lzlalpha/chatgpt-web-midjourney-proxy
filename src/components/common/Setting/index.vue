@@ -62,13 +62,13 @@ const show = computed({
           </div>
         </NTabPane>
 
-        <NTabPane name="server" tab="server" v-if=" ! homeStore.myData.session.isHideServer">
+        <!-- <NTabPane name="server" tab="server" v-if=" ! homeStore.myData.session.isHideServer">
           <template #tab>
             <SvgIcon class="text-lg" icon="mingcute:server-line" />
             <span class="ml-2">{{ $t('mjset.server') }}</span>
           </template>
           <aiSetServer />
-        </NTabPane>
+        </NTabPane> -->
         <NTabPane name="Config" tab="Config">
           <template #tab>
             <SvgIcon class="text-lg" icon="ri:list-settings-line" />
@@ -76,7 +76,7 @@ const show = computed({
             <span class="ml-2">{{ $t('mjset.about') }}</span>
           </template>
           <About />
-        </NTabPane>
+        </NTabPane> -->
 
       </NTabs>
     </div>
