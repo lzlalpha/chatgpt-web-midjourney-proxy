@@ -67,7 +67,7 @@ export function fetchVerify<T>(token: string) {
   //   url: '/verify',
   //   data: { token },
   // })
-	if(token === "daima101"){
+	if(token == "daima101"){
     return {"status":"Success", message: 'Verify successfully', data: null}
   } else {
     return {"status":"Fail", message: '密钥无效 | Secret key is invalid', data: null}
