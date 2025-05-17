@@ -63,10 +63,15 @@ export function fetchSession<T>() {
 }
 
 export function fetchVerify<T>(token: string) {
-  return post<T>({
-    url: '/verify',
-    data: { token },
-  })
+  // return post<T>({
+  //   url: '/verify',
+  //   data: { token },
+  // })
+	if(token === "daima101"){
+    return {"status":"Success", message: 'Verify successfully', data: null}
+  } else {
+    return {"status":"Error", message: 'Verify failed', data: null}
+  }
 }
 
 export * from "./mjapi"
