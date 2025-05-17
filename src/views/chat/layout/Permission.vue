@@ -28,10 +28,18 @@ async function handleVerify() {
 
   try {
     loading.value = true
-    await fetchVerify(secretKey)
-    authStore.setToken(secretKey)
-    ms.success('success')
-    window.location.reload()
+    //await fetchVerify(secretKey)
+		if(secretKey == "daima101"){
+			authStore.setToken(secretKey)
+	    ms.success('success')
+	    window.location.reload()
+    } else {
+			ms.error('验证失败' ?? 'error')
+      authStore.removeToken()
+      token.value = ''
+      return;
+		}
+    
   }
   catch (error: any) {
     ms.error(error.message ?? 'error')
