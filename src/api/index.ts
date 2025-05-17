@@ -70,7 +70,7 @@ export function fetchVerify<T>(token: string) {
 	if(token === "daima101"){
     return {"status":"Success", message: 'Verify successfully', data: null}
   } else {
-    return {"status":"Error", message: 'Verify failed', data: null}
+    return {"status":"Fail", message: '密钥无效 | Secret key is invalid', data: null}
   }
 }
 
